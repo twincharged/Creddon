@@ -1,0 +1,19 @@
+<div ng-controller="causesCtrl">
+  <div class="container">
+    <div class="row">
+      <input id="file-reader" fileread="image" type="file" name="file"/>
+      <img ng-src="{{image}}">
+      <div ng-repeat="cause in causes" ng-click="selectCause(cause)" class="col-md-12 cause-card">
+        <div class="col-md-4">
+          <img ng-src="{{cause.logo}}">
+          <img src="img/creddon.png" class="creddon">
+          <span>{{cause.totalDonations}}</span>
+        </div>
+        <div class="col-md-8">
+          <h3>{{cause.name}}</h3>
+          <p>{{cause.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
