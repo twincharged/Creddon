@@ -4,6 +4,16 @@
 header {
 }
 
+
+* {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Open Sans";
+  font-weight: 600;
+}
+a {
+  color: rgb(30, 100, 160)
+}
+
 h1 {
   font-family: Gudea;
   line-height: 65%;
