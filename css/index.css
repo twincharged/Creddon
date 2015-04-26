@@ -4,7 +4,11 @@
 header {
 }
 
-
+h1 {
+  font-family: Gudea;
+  line-height: 65%;
+  font-size: 52px;
+}
 #main {
   background: #D4E0FA;
   padding-bottom: 50px;
