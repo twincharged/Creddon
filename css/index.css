@@ -46,4 +46,7 @@ img.handup, img.water {
     display: block;
     font-size: 5vw;
   }
+  h1 {
+    font-size:8vw;
+  }
 }
