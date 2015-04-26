@@ -8,7 +8,9 @@
   background: #D4E0FA;
   padding-bottom: 100px;
 }
-
+.right-col {
+  padding-top: 60px;
+}
 .logo {
   width: 50px;
 }
