@@ -35,15 +35,15 @@
           <h2>$1 to <a href="http://handup.org">HandUp.org</a></h2>
           <h4>Sponsored by <a href="http://startuphouse.com">StartupHouse.com</a></h4>
           <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://creddon.com/coming-soon.html" data-via="getcreddon" data-size="large" data-hashtags="getcreddon">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-          <img src="img/handup.png">
+          <img src="img/handup.jpg">
           <hr>
           <h2>$1 to <a href="http://water.org">Water.org</a></h2>
           <h4>Sponsored by <a href="http://bebo.com">Bebo.com</a></h4>
           <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://creddon.com/coming-soon.html" data-via="getcreddon" data-size="large" data-hashtags="getcreddon">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-          <img src="img/water.png">
+          <img src="img/water.jpg">
         </div>
         <div class="col-md-6">
-          <input id="email" placeholder="Email">
+          <input id="email" type="email" placeholder="Email">
           <button id="signup">Sign up</button>
           <a class="twitter-timeline" href="https://twitter.com/GiveCreddon" data-widget-id="592125670861373440">Tweets by @GiveCreddon</a>
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -59,14 +59,13 @@
     $.ajax({
       type:"POST",
       url:"http://vast-chamber-8629.herokuapp.com/emails/",
-      headers:{"Content-Type":"text/plain"},
+      headers:{"Content-Type":"application/json"},
       data:{"email": $("#email").val()},
       success:function(){
-        console.log("yay")
+        $("#email").val("")
+        alert("Thanks!")
       }
     })
-
-    $("#email").val()
   })
   </script>
 </body>
