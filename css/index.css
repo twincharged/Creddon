@@ -24,3 +24,9 @@ img.handup, img.water {
 .row {
   text-align: center;
 }
+
+#signup, #email {
+  width: 50%;
+  display: block;
+  margin: 10px auto;
+}

@@ -27,7 +27,9 @@ angular.module("Creddon", [
   }
   window.scope = $scope
 
-  $httpf.get(APIURL+"/causes/").success(function(data) {$scope.causes = data}).error(log)
+  $httpf.get(APIURL+"/causes/").success(function(data) {
+    $scope.causes = data
+  }).error(log)
 }])
 
 
