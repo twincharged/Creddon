@@ -2,6 +2,21 @@
   cursor: pointer;
 }
 
+
+
+#main {
+  background: #D4E0FA;
+}
+
+.logo {
+  width: 50px;
+}
+img.handup, img.water {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
 #file-reader {
   display: none;
 }
