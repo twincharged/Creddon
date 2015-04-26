@@ -21,7 +21,7 @@
   <header>
     <div class="container">
       <div class="row">
-        <div class="col-md-1"><img src="img/creddon.png"></div>
+        <div class="col-md-1"><img class="logo" src="img/creddon.png"></div>
         <div class="col-md-3"><h1 class="name">Creddon</h1></div>
         <div class="col-md-8"><h2 class="headline">Tweet a photo to give a cause $</h2></div>
       </div>
@@ -43,8 +43,8 @@
           <img src="img/water.png">
         </div>
         <div class="col-md-6">
-          <input placeholder="Email">
-          <button>Sign up</button>
+          <input id="email" placeholder="Email">
+          <button id="signup">Sign up</button>
           <a class="twitter-timeline" href="https://twitter.com/GiveCreddon" data-widget-id="592125670861373440">Tweets by @GiveCreddon</a>
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div>
@@ -54,6 +54,21 @@
 
   <footer></footer>
   <script src="js/lib/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  $("#signup").click(function(){
+    $.ajax({
+      type:"POST",
+      url:"http://vast-chamber-8629.herokuapp.com/emails/",
+      headers:{"Content-Type":"text/plain"},
+      data:{"email": $("#email").val()},
+      success:function(){
+        console.log("yay")
+      }
+    })
+
+    $("#email").val()
+  })
+  </script>
 </body>
 
 </html>
