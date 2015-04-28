@@ -12,16 +12,27 @@
   <meta name="fragment" content="!" />
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@GiveCreddon">
-  <meta name="twitter:title" content="Social Good">
-  <meta name="twitter:description" content="I just donated $1 to @HandUp, sponsored by @StartupHouse, via @GiveCreddon! #socialgood">
+  <meta name="twitter:title" content="Retweet a photo to donate $1 to a good cause">
+  <meta name="twitter:description" content="Creddon lets people retweet beautiful photos to support a good cause. For each retweet, a sponsor will pay $1 to the cause. Creddon was launched at, and won, Startup Weekend East Bay April 26, 2015.">
   <meta name="twitter:creator" content="@GiveCreddon">
-  <meta name="twitter:image" content="http://creddon.com/img/handup.jpg">
+  <meta name="twitter:image" content="http://creddon.com/img/creddon.png">
   <meta property="og:image" content="http://creddon.com/img/creddon.png" />
+  <meta property="og:title" content="Retweet a photo to donate $1 to a good cause" />
+  <meta property="og:site_name" content="Creddon" />
+  <meta property="og:url" content="http://creddon.com" />
+  <meta property="og:description" content="Creddon is on a mission to increase giving to good causes. The first way we do that is by letting people retweet beautiful photos to support a good cause. For each retweet, a sponsor will pay $1 to the cause. Creddon was launched at, and won, Startup Weekend East Bay on April 26, 2015. The name comes from giving cred and generating donations." />
+  <meta property="fb:app_id" content="1594855824087105" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale" content="en_UK" />
+  <meta property="article:author" content="Fredrik Olovsson" />
+  <meta property="article:publisher" content="Creddon" />
   <link href="http://fonts.googleapis.com/css?family=Gudea|Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css">
   <link href="css/lib/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="css/lib/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/index.css" rel="stylesheet" type="text/css">
   <link href="favicon.ico" rel="shortcut icon" />
+  <!-- Google Analytics -->
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -33,6 +44,24 @@
 </head>
 
 <body>
+  <!-- Facebook SDK -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1594855824087105',
+        xfbml      : true,
+        version    : 'v2.3'
+      });
+    };
+  
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
   <header>
     <div class="container">
       <div class="row">
@@ -62,7 +91,7 @@
         </div>
         <div class="col-md-6 right-col">
           <h2><a href=https://docs.google.com/forms/d/1ZQhcMlpsq_7brLCoyYWs0JxU2pdgoVa354PaZcNmtt4/viewform?usp=send_form>Submit Email for Updates</a></h2>
-          <h4><a href="https://www.youtube.com/watch?v=IFsQ5XuG74w">Watch Demo</a></h4>
+          <h4>We won't spam you, promise!</h4>
           <!--<input id="email" type="email" class="form-control" placeholder="Email">
           <button id="signup" class="form-control">Sign up</button>-->
           <a class="twitter-timeline" href="https://twitter.com/search?q=%40GiveCreddon" data-widget-id="592444403647578112">Tweets about @GiveCreddon</a>
