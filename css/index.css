@@ -65,3 +65,11 @@ img.handup, img.water {
     font-size:8vw;
   }
 }
+
+.centered {
+  text-align: center;
+}
+
+.body {
+  text-align: left;
+}
