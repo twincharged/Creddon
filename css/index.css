@@ -73,3 +73,7 @@ img.handup, img.water {
 .body {
   text-align: left;
 }
+
+#menu {
+  margin-top: 30px;
+}
