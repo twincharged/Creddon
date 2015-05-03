@@ -1,7 +1,8 @@
 window.APIURL = ""
 
 angular.module("Creddon", [
-  "ui.router"
+  "ui.router",
+  "ngImgCrop"
 ])
 
 .config(["$stateProvider", "$urlRouterProvider", "$httpProvider", function($stateProvider, $urlRouterProvider, $httpProvider){
@@ -22,31 +23,37 @@ angular.module("Creddon", [
 .controller("landingCtrl", ["$scope", function($scope){}])
 .controller("causesCtrl", ["$scope", "$httpf", function($scope, $httpf){
 
+  $scope.tw = false
+  $scope.fb = false
+  $scope.ig = false
+
   $scope.selectCause = function(cause) {
+    $scope.selectedCause = cause
     angular.element("#file-reader").trigger("click")
   }
-  window.scope = $scope
+  // $scope.share = function(){
+  //   $http({
+  //     type: "POST",
+  //     url: "https://creddon.com/crop",
+  //     data: {img: $scope.image, logo: $scope.selectedCause.logo, tw: $scope.tw, fb: $scope.fb, ig: $scope.ig}
+  //   })
+  // }
 
-  $httpf.get(APIURL+"/causes/").success(function(data) {
+  $httpf.get(APIURL+"/causes/").success(function(data){
     $scope.causes = data
   }).error(log)
-}])
 
-
-
-
-.directive("fileread", [function () {
-  return {
-    scope: { fileread: "=" },
-    link: function(scope, element, attributes){
-      element.bind("change", function(changeEvent){
-        var fl = changeEvent.target.files[0]
-        if (!fl) return false
-        scope.$apply(function(){scope.fileread = fl})
-      })
+  angular.element(document.querySelector("#file-reader")).on("change", function(e){
+    var file = e.currentTarget.files[0],
+        reader = new FileReader()
+    reader.onload = function(e){
+      $scope.image = e.target.result
+      $scope.$apply()
     }
-  }
+    reader.readAsDataURL(file)
+  })
 }])
+
 
 
 

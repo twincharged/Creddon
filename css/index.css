@@ -50,6 +50,13 @@ img.handup, img.water {
   margin: 10px auto;
 }
 
+.crop-area {
+  overflow: hidden;
+  width:500px;
+  height:500px;
+  margin: 0 auto;
+}
+
 @media (max-width: 1000px){
   h1, h2, h3, h4 {
     position: relative;
